@@ -56,6 +56,8 @@ public class CatHouseTest {
 
     }
 
+    //Create tests for `Cat getCatById(Integer id)`
+
     @Test
     public void getCatIdTest() {
 
@@ -77,6 +79,28 @@ public class CatHouseTest {
     }
 
 
+    // Create tests for Integer getNumberOfCats
+
+    @Test
+    public void getNumberofCatsTest () {
+        String expectedName ="";
+        Date expectedBirthDate = new Date();
+        Integer expectedId = 0;
+
+
+        // When
+        Cat actualCat = new Cat(expectedName, expectedBirthDate, expectedId);
+        Integer actualCats =1;
+        CatHouse.add(actualCat);
+        Integer expectedCats = CatHouse.getNumberOfCats();
+
+
+        // Then
+        Assert.assertEquals(expectedCats,actualCats);
+
+
+
+    }
 
 
 
