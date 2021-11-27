@@ -83,6 +83,8 @@ public class CatHouseTest {
 
     @Test
     public void getNumberofCatsTest () {
+
+        // Given
         String expectedName ="";
         Date expectedBirthDate = new Date();
         Integer expectedId = 0;
@@ -90,7 +92,7 @@ public class CatHouseTest {
 
         // When
         Cat actualCat = new Cat(expectedName, expectedBirthDate, expectedId);
-        Integer actualCats =1;
+        Integer actualCats =3;
         CatHouse.add(actualCat);
         Integer expectedCats = CatHouse.getNumberOfCats();
 
